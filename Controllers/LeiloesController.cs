@@ -54,7 +54,7 @@ namespace LanceCertoLite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LeilaoId,Titulo,DataInicio,DataFim")] Leilao leilao)
+        public async Task<IActionResult> Create([Bind("LeilaoId,Titulo,NomeImovel,NomeDono,ValorInicial,DataInicio,DataFim")] Leilao leilao)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace LanceCertoLite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LeilaoId,Titulo,DataInicio,DataFim")] Leilao leilao)
+        public async Task<IActionResult> Edit(int id, [Bind("LeilaoId,Titulo,NomeImovel,NomeDono,ValorInicial,DataInicio,DataFim")] Leilao leilao)
         {
             if (id != leilao.LeilaoId)
             {
